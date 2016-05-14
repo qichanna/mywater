@@ -1,0 +1,46 @@
+1.service tomcat7 start/restart/stop
+2./etc/init.d/tomcat7 start/restart/stop
+3./usr/share/tomcat7/bin sh startup.sh  shutdown.sh
+
+
+
+（1）tomcat7配置文件
+/etc/tomcat7/server.xml   //修改端口
+/etc/tomcat7/web.xml
+/etc/tomcat7/tomcat-user.xml
+ 
+（2）tomcat7日志文件
+/var/log/tomcat7
+ 
+（3）tomcat7 web默认根目录文件
+/var/lib/tomcat7/webapps/ROOT/
+
+sudo su - root
+
+
+github
+新项目上传
+1. cd 到项目文件夹根目录
+2. git init
+3. git add .
+4. git commit -m "xxx"
+5. git remote add origin https://github.com/qichanna/xxxxxx
+6. git pull origin master
+7. git push -u origin master
+
+maven
+GroupId 项目的包名
+ArtifactId 项目名
+
+
+sublime快捷键
+
+ctrl+d    选中多个相同的字符
+alt+F3    同上
+ctrl+k    跳过选中的字符
+ctrl+h    查找替换
+ctrl+shift+d   复制一行
+ctrl+{}   列左右缩进
+ctrl+enter   下面插入一行
+ctrl+shift+enter   上面插入一行
+ctrl+shift+v    粘贴并格式化

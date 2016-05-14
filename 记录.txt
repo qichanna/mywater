@@ -21,9 +21,9 @@ sudo su - root
 github
 新项目上传
 1. cd 到项目文件夹根目录
-2. touch README.md
+(可以不要)2. touch README.md
 3. git init
-4. git add README.md
+(可以不要)4. git add README.md
 5. git add .
 6. git commit -m "xxx"
 7. git remote add origin https://github.com/qichanna/xxxxxx

@@ -1,46 +1,48 @@
-1.service tomcat7 start/restart/stop
+ï»¿1.service tomcat7 start/restart/stop
 2./etc/init.d/tomcat7 start/restart/stop
 3./usr/share/tomcat7/bin sh startup.sh  shutdown.sh
 
 
 
-£¨1£©tomcat7ÅäÖÃÎÄ¼ş
-/etc/tomcat7/server.xml   //ĞŞ¸Ä¶Ë¿Ú
+ï¼ˆ1ï¼‰tomcat7é…ç½®æ–‡ä»¶
+/etc/tomcat7/server.xml   //ä¿®æ”¹ç«¯å£
 /etc/tomcat7/web.xml
 /etc/tomcat7/tomcat-user.xml
  
-£¨2£©tomcat7ÈÕÖ¾ÎÄ¼ş
+ï¼ˆ2ï¼‰tomcat7æ—¥å¿—æ–‡ä»¶
 /var/log/tomcat7
  
-£¨3£©tomcat7 webÄ¬ÈÏ¸ùÄ¿Â¼ÎÄ¼ş
+ï¼ˆ3ï¼‰tomcat7 webé»˜è®¤æ ¹ç›®å½•æ–‡ä»¶
 /var/lib/tomcat7/webapps/ROOT/
 
 sudo su - root
 
 
 github
-ĞÂÏîÄ¿ÉÏ´«
-1. cd µ½ÏîÄ¿ÎÄ¼ş¼Ğ¸ùÄ¿Â¼
-2. git init
-3. git add .
-4. git commit -m "xxx"
-5. git remote add origin https://github.com/qichanna/xxxxxx
-6. git pull origin master
-7. git push -u origin master
+æ–°é¡¹ç›®ä¸Šä¼ 
+1. cd åˆ°é¡¹ç›®æ–‡ä»¶å¤¹æ ¹ç›®å½•
+2. touch README.md
+3. git init
+4. git add README.md
+5. git add .
+6. git commit -m "xxx"
+7. git remote add origin https://github.com/qichanna/xxxxxx
+8. git pull origin master
+9. git push -u origin master
 
 maven
-GroupId ÏîÄ¿µÄ°üÃû
-ArtifactId ÏîÄ¿Ãû
+GroupId é¡¹ç›®çš„åŒ…å
+ArtifactId é¡¹ç›®å
 
 
-sublime¿ì½İ¼ü
+sublimeå¿«æ·é”®
 
-ctrl+d    Ñ¡ÖĞ¶à¸öÏàÍ¬µÄ×Ö·û
-alt+F3    Í¬ÉÏ
-ctrl+k    Ìø¹ıÑ¡ÖĞµÄ×Ö·û
-ctrl+h    ²éÕÒÌæ»»
-ctrl+shift+d   ¸´ÖÆÒ»ĞĞ
-ctrl+{}   ÁĞ×óÓÒËõ½ø
-ctrl+enter   ÏÂÃæ²åÈëÒ»ĞĞ
-ctrl+shift+enter   ÉÏÃæ²åÈëÒ»ĞĞ
-ctrl+shift+v    Õ³Ìù²¢¸ñÊ½»¯
+ctrl+d    é€‰ä¸­å¤šä¸ªç›¸åŒçš„å­—ç¬¦
+alt+F3    åŒä¸Š
+ctrl+k    è·³è¿‡é€‰ä¸­çš„å­—ç¬¦
+ctrl+h    æŸ¥æ‰¾æ›¿æ¢
+ctrl+shift+d   å¤åˆ¶ä¸€è¡Œ
+ctrl+{}   åˆ—å·¦å³ç¼©è¿›
+ctrl+enter   ä¸‹é¢æ’å…¥ä¸€è¡Œ
+ctrl+shift+enter   ä¸Šé¢æ’å…¥ä¸€è¡Œ
+ctrl+shift+v    ç²˜è´´å¹¶æ ¼å¼åŒ–

@@ -1,0 +1,76 @@
+﻿欢迎页
+默认tonmcat是根目录下index.jsp,可以修改web.xml，可以加入多个,优先级按照先后次序
+<welcome-file-list>
+	<welcome-file>/xxx1.jsp</welcome-file>
+	<welcome-file>/xxx2.jsp</welcome-file>
+</welcome-file-list>
+
+jsp页面头部
+<%@ page contentType="text/html;charset=UTF-8" language="java" import="java.util.*"%>
+<%@ import="java.util.*"%>
+
+注释
+<!--html注释 客户端可见-->
+<%-- jsp注释 客户端不可见--%>
+<% 
+	//jsp单行注释 客户端不可见
+	/*
+		多行注释 客户端不可见
+	*/
+%>
+
+
+<% %> jsp脚本  执行方法等写在这里面
+<%! %>  定义jsp变量或者方法 里面的方法不会执行
+<%= %> jsp表达式  可以调用定义中的变量和方法，可以不用out.println就可以输出
+
+pageEncoding是jsp文件本身的编码
+ContentType的Charset是指服务器发给客户端时的内容编码
+ContentType更常用
+
+中文问题：
+request.setCharacterEncoding("utf-8");  无法解决url中的中文乱码问题，get和post可以
+在tomcat的server.xml（也就是修改端口的文件）中加入URIEncodeing="utf-8"
+保存cookie时：
+URLEncoder.encode("xxx","utf-8")
+读取cookie时：
+URLDecoder.decode("xxx","utf-8")
+
+request.getRealPath(xxx.jsp"")  例如c:\a\xxx.jsp
+request.getContextPath(xxx.jsp"")  /FirstMaven/xxx.jsp
+
+jsp内置out对象会显示在PrintWrite后面，即使代码写在PrintWrite前面,除非用out.fluish()强制输出
+
+请求重定向 response.sendRedirect()，相当于客户端2次请求，之前请求的参数等不会保存，地址栏也会改变
+请求转发 request.getRequestDispatcher().forword(request,response), 1次请求，服务器帮忙第二次请求，之前请求的参数等会保存，地址栏不会改变 （等同于<jsp:forward page="xxx.jsp"/>）
+
+
+1. session.setMaxInactiveInterval(100)；单位秒
+2. web.xml
+   <session-config>
+   	<session-timeout>30</session-timeout>  单位分钟 tomcat默认30分钟
+   </session-config>
+
+application 全局对象 服务器启动到结束
+page 本页面
+pageContext 包括本页面application session request 等等集成在这个里面
+
+
+errorPage="xxx.jsp"  <%@ page%>中这个属性代码出现异常交给这个jsp界面处理，处理异常的那个界面中的<%@ page%>需要加入isErrorPage="true"这个标签
+
+四个作用域
+application,session,request,page
+
+创建Cookie对象：
+Cookie newCookie = new Cookie(String key,Object value);
+写入Cookie对象:
+response.addCookie(newCookie);
+读取Cookie对象:
+Cookie[] cookies = request.getCookies();
+
+<%@ include file=""%>和主jsp合并成一个servlet
+<jsp:include page="">和主jsp分别编译成二个servlet
+
+<jsp:forward page="xxx.jsp">
+	<jsp:param name="username" value="xxx"/>  可以改变原有参数的值或者添加新的参数
+</jsp:forward>

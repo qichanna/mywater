@@ -74,3 +74,23 @@ Cookie[] cookies = request.getCookies();
 <jsp:forward page="xxx.jsp">
 	<jsp:param name="username" value="xxx"/>  可以改变原有参数的值或者添加新的参数
 </jsp:forward>
+
+
+
+
+
+
+
+servlet
+----------------------------------------------------------
+response.setContentType("text/html;charset=utf-8");
+
+在web.xml中加入
+<servlet>
+	<servlet-name>HelloServlet</servlet-name>
+	<servlet-class>servlet.HelloServlet</servlet-class>  //包名路径
+</servlet>
+<servlet-mapping>
+	<servlet-name>HelloServlet</servlet-name>
+	<servlet-pattern>/servlet/HelloServlet</servlet-pattern>
+</servlet-mapping>

@@ -95,3 +95,31 @@ response.setContentType("text/html;charset=utf-8");
 	<servlet-name>HelloServlet</servlet-name>
 	<servlet-pattern>/servlet/HelloServlet</servlet-pattern>
 </servlet-mapping>
+
+
+<servlet-mapping>
+    <servlet-name>HelloServlet</servlet-name>
+    <url-pattern>/servlet/HelloServlet</url-pattern>  // url-pattern处必须以/开头，这里的/表示项目的根目录
+  </servlet-mapping>
+  
+  
+  
+//使用相对路径访问HelloServlet -->
+//  /servlet/HelloServlet 第一个/表示服务器的根目录
+    <a href="servlet/HelloServlet">访问HelloServlet!</a><br>
+    
+//使用绝对路径 访问HelloServlet,可以使用path变量:path变量表示项目的根目录
+    String path = request.getContextPath();
+    String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+    <a href="<%=path%>/servlet/HelloServlet">访问HelloServlet!</a><br>
+    
+//  表单中action的URL地址写法，与超链接方式完全相同。
+  
+
+//请求重定向方式跳转到test.jsp,当前路径是ServletPathDirection/servlet/
+//使用request.getContextPath获得上下文对象
+       response.sendRedirect(request.getContextPath()+"/test.jsp");
+	
+//服务器内部跳转,这里的斜线表示项目的根目录
+	request.getRequestDispatcher("/test.jsp").forward(request, response);
+	request.getRequestDispatcher("../test.jsp").forward(request, response);

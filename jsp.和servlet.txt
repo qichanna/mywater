@@ -135,3 +135,21 @@ response.setContentType("text/html;charset=utf-8");
 
 在servlet中获取上述初始化数据
 this.getInitParameter("aaa");
+
+//hashmap的遍历
+Set<Items> keys = goods.keySets();
+Iterator<Items> it = keys.iterator();
+
+whilr(it.hasNext()){
+	Items i = it.next();
+	//xxxxi.getxxxx()等
+}
+
+//另一种遍历Set
+Set<Map.Entry<Items,Integer>> items = c.goods().entrySet();
+for(Map.Entry<Items,Integer> obj : items){
+	.....
+}
+	
+	
+}

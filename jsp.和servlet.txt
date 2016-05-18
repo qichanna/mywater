@@ -150,6 +150,3 @@ Set<Map.Entry<Items,Integer>> items = c.goods().entrySet();
 for(Map.Entry<Items,Integer> obj : items){
 	.....
 }
-	
-	
-}

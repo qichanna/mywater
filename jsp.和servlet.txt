@@ -150,3 +150,17 @@ Set<Map.Entry<Items,Integer>> items = c.goods().entrySet();
 for(Map.Entry<Items,Integer> obj : items){
 	.....
 }
+
+
+
+
+
+
+
+
+
+
+spring
+---------------------------------------------------------------------------------
+自动装配
+byname对于id，bytype对于class

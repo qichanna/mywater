@@ -52,6 +52,9 @@ github
 8. git pull origin master
 9. git push -u origin master
 
+
+git clone git@github.com:qichanna/Imserver.git
+
 -------------------------------------------------
 maven
 

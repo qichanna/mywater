@@ -162,5 +162,33 @@ for(Map.Entry<Items,Integer> obj : items){
 
 spring
 ---------------------------------------------------------------------------------
+IOC方面：
+
 自动装配
 byname对于id，bytype对于class
+
+Aware接口 实现了Aware的bean可以获取applition等中的东西，可以看成获得了application等系统环境的变量
+
+@Required等于@Autowired(require=true)
+@@Autowired可以为List和map注入所有子类
+@Qualifier()，括号后面可以制定具体要注入哪个子类 @Named也有类似功能，@Named通常也可以看作和@Component类似
+@Order()可以为注入子类的顺序定义,括号后面是数字，越小越优先
+
+@Configuration注解类，@Bean配合注解类中的方法
+@Bean(name='store',initMethod='init',destoryMethod='destory'),创建类时调用StringStore的init方法，销毁时候调用destory方法
+public Store stringStore(){
+	return new StringStore();
+}
+initMethod和destoryMethod等同于@PostConstruct和@preDestroy
+
+
+
+@ImportResource("classpath:config.xml")和@value注解数据库的连接
+等同于xml中<context propert-placeholder location="classpath:/config.properties"/>
+
+@Scope(value="session",proxyMode=ScopedProxyMode.TARGET_CLASS)
+
+@Resiurce通常会用@Autowired代替 ，@Inject也有类似功能
+
+
+AOP方面：

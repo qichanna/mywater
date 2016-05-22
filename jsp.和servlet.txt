@@ -188,7 +188,7 @@ initMethod和destoryMethod等同于@PostConstruct和@preDestroy
 
 @Scope(value="session",proxyMode=ScopedProxyMode.TARGET_CLASS)
 
-@Resiurce通常会用@Autowired代替 ，@Inject也有类似功能
+@Resource通常会用@Autowired代替 ，@Inject也有类似功能
 
 
 AOP方面：

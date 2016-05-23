@@ -1,3 +1,5 @@
+intellij 行下移动，光标定位到末尾
+
 overflow
 clear
 

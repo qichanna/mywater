@@ -206,3 +206,15 @@ width: 100%;
    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">下拉菜单项</a></li>
 </ul>
 </div>
+
+
+  <li role="presentation" class="divider"></li>下拉菜单项中的分割线
+  原理：
+  .dropdown-menu .divider {
+  height: 1px;
+  margin: 9px 0;
+  overflow: hidden;
+  background-color: #e5e5e5;
+}
+
+  <li role="presentation" class="dropdown-header">菜单头部</li>

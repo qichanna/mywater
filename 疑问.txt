@@ -31,15 +31,4 @@ aria-labelledb
   z-index: 1000;/*让下拉菜单项不被其他元素遮盖住*/
   display: none;/*默认隐藏下拉菜单项*/
 。。。。。。。。。。。。。
-  ｝
-
-  <li role="presentation" class="divider"></li>下拉菜单项中的分割线
-  原理：
-  .dropdown-menu .divider {
-  height: 1px;
-  margin: 9px 0;
-  overflow: hidden;
-  background-color: #e5e5e5;
-}
-
-  <li role="presentation" class="dropdown-header">菜单头部</li>
+｝

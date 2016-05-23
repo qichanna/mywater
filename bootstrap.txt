@@ -208,8 +208,8 @@ width: 100%;
 </div>
 
 
-  <li role="presentation" class="divider"></li>下拉菜单项中的分割线
-  原理：
+<li role="presentation" class="divider"></li>下拉菜单项中的分割线
+ 原理：
   .dropdown-menu .divider {
   height: 1px;
   margin: 9px 0;

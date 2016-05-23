@@ -1,0 +1,178 @@
+﻿标题: <h1> ... <h6> <.h1> ... <.h6>
+副标题: <samll> <.small>
+段落和强调: <p> class =".lead" 增大加粗字体
+粗体: <b> <strong>
+斜体: <em> <i>
+
+bootstrap中特定类名: 
+                     .text-muted：提示，使用浅灰色（#999）
+                     .text-primary：主要，使用蓝色（#428bca）
+                     .text-success：成功，使用浅绿色(#3c763d)
+                     .text-info：通知信息，使用浅蓝色（#31708f）
+                     .text-warning：警告，使用黄色（#8a6d3b）
+                     .text-danger：危险，使用褐色（#a94442）
+
+text-align: left;center;right;justify(两端对齐) 对应BS中.text-left;.text-center;text-right;text-justify
+
+标准3种列表:
+无序：<ul><li>...</li></ul>
+有序：<ol><li>...</li></ol>
+定义列表：<dl><dt>...</dt><dd></dd></dl>
+
+去列表点 class="list-unstyled"
+
+内联列表 class="list-inline"(相当于li水平显示，display:inline-block)
+
+显示代码背景颜色：<code><pre>(单行和多行，背景有颜色),<kbd>(背景黑色，键盘输入提示) .pre-scrollable定义<pre>带滚动
+
+
+表格
+<table class="">
+<thread><tr><th></th><th></th></tr></thread>
+<tbody><tr><td></td></tr></tbody>
+</table>
+
+<table class="以下"></table>
+.table：基础表格
+
+.table-striped：斑马线表格(原理:nth-child)
+
+.table-bordered：带边框的表格
+原理
+.table-bordered > tfoot > tr > td {
+  border: 1px solid #ddd; /*每个单元格设置边框*/
+}
+
+.table-hover：鼠标悬停高亮的表格
+原理:
+.table-hover > tbody > tr:hover > th {
+background-color: #f5f5f5;
+}
+
+.table-condensed：紧凑型表格
+原理：
+.table-condensed > tfoot > tr > td {
+padding: 5px;
+}(减小padding)
+
+.table-responsive：响应式表格
+用法:
+<div class="table-responsive">
+<table class="table table-bordered">
+   …
+</table>
+</div>
+
+
+----------------------------------表单
+
+.form-control 对input样式进行了改变
+
+.form-horizontal和.form-group，水平表单，form-group可以看作row
+
+.form-inline内联表单，相当于显示在同一行
+
+input
+
+<select multiple class="form-control">
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+ </select>
+ 
+ <textarea class="form-control" rows="3" col=""></textarea> form-control样式的表单控件宽度为100%或auto，无需col
+
+ checkbox和radio需要按以下用法:(也可以加在label上)
+<div class="checkbox">
+	<label>
+	<input type="checkbox" value="">
+	记住密码
+	</label>
+</div>
+
+<div class="radio">
+	<label>
+	<input type="radio" name="optionsRadios" id="optionsRadios1" value="love" checked>
+	喜欢
+	</label>
+</div>
+
+内联，也就是水平排列，需以下这样加，否则布局会有重叠
+<div class="form-group">
+    <label class="checkbox-inline">
+      <input type="checkbox"  value="option1">游戏
+    </label>
+    <label class="checkbox-inline">
+      <input type="checkbox"  value="option2">摄影
+    </label>
+    <label class="checkbox-inline">
+    <input type="checkbox"  value="option3">旅游
+    </label>
+  </div>
+
+  按钮，用<button class="btn xxxxx">这样
+
+.input-sm:让控件比正常大小更小
+.input-lg:让控件比正常大小更大
+
+要让控件在焦点状态下有上面样式效果，需要给控件添加类名“form-control”
+
+<fieldset disabled>可以对包含在里面的整个内容都禁用
+
+.has-warning:警告状态（黄色）
+.has-error：错误状态（红色）   
+.has-success：成功状态（绿色）
+上述3种状态可以和has-feedback联合使用
+
+.help-block相当于定制过的span
+
+text-shadow 文本阴影
+box-shadow  边框阴影
+
+<button class="btn" type="button">基础按钮.btn</button>  
+<button class="btn btn-default" type="button">默认按钮.btn-default</button> 
+<button class="btn btn-primary" type="button">主要按钮.btn-primary</button> 
+<button class="btn btn-success" type="button">成功按钮.btn-success</button> 
+<button class="btn btn-info" type="button">信息按钮.btn-info</button> 
+<button class="btn btn-warning" type="button">警告按钮.btn-warning</button> 
+<button class="btn btn-danger" type="button">危险按钮.btn-danger</button> 
+<button class="btn btn-link" type="button">链接按钮.btn-link</button>
+
+除了button ，a也可以，其他如input，span，div都可以，但不建议使用
+
+.btn-lg 大型按钮
+.btn-sm 小型按钮
+.btn-xs 超小型按钮
+
+.btn-block宽度充满父容器
+原理:
+.btn-block {
+display: block;
+width: 100%;
+padding-right: 0;
+padding-left: 0;
+}
+.btn-block + .btn-block {
+margin-top: 5px;
+}
+input[type="submit"].btn-block,
+input[type="reset"].btn-block,
+input[type="button"].btn-block {
+width: 100%;
+}
+
+<button>的禁用，用样式.disabled只是看上去禁用，实际不会禁用，disabled="disabled"则可以全部实现
+
+图片形状
+<img class="">
+1、img-responsive：响应式图片，主要针对于响应式设计
+2、img-rounded：圆角图片
+3、img-circle：圆形图片
+4、img-thumbnail：缩略图片
+
+
+<span class="glyphicon glyphicon-search"></span>
+所有icon都是以”glyphicon-”前缀的类名开始，然后后缀表示图标的名称
+

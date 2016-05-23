@@ -176,3 +176,33 @@ width: 100%;
 <span class="glyphicon glyphicon-search"></span>
 所有icon都是以”glyphicon-”前缀的类名开始，然后后缀表示图标的名称
 
+
+列数不可超过12
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">.col-md-4</div>
+    <div class="col-md-8">.col-md-8</div>
+  </div>
+</div>
+
+
+<div class="col-md-2 col-md-offset-4">列偏移
+
+“col-md-push-*”和“col-md-pull-* 右移和左移，right和left
+
+行中可以嵌套列，但是可能会换行
+
+
+下拉菜单，与selected不同，和android的spinner类似
+<div class="dropdown">
+<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">注意div的类名dropdown和data-toggle要一样
+下拉菜单
+<span class="caret"></span>
+</button>
+<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+   <li role="presentation"><a role="menuitem" tabindex="-1" href="#">下拉菜单项</a></li>
+   …
+   <li role="presentation" class="divider"></li>
+   <li role="presentation"><a role="menuitem" tabindex="-1" href="#">下拉菜单项</a></li>
+</ul>
+</div>

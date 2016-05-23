@@ -1,4 +1,4 @@
-intellij �����ƶ�����궨λ��ĩβ
+﻿intellij ÐÐÏÂÒÆ¶¯£¬¹â±ê¶¨Î»µ½Ä©Î²
 
 overflow
 clear
@@ -9,7 +9,7 @@ clear
 
 position: absolute;
 
-α�� :focus  :active
+Î±Àà :focus  :active
 
 -webkit-box-shadow: inset 0 1px 1pxrgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
 box-shadow: inset 0 1px 1pxrgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
@@ -18,3 +18,28 @@ outline
 fieldset
 
 white-space: nowrap;
+
+right和margin right
+
+aria-labelledb
+
+
+.dropdown-menu {
+  position: absolute;/*设置绝对定位，相对于父元素div.dropdown*/
+  top: 100%;/*让下拉菜单项在父菜单项底部，如果父元素不设置相对定位，该元素相对于body元素*/
+  left: 0;
+  z-index: 1000;/*让下拉菜单项不被其他元素遮盖住*/
+  display: none;/*默认隐藏下拉菜单项*/
+。。。。。。。。。。。。。
+  ｝
+
+  <li role="presentation" class="divider"></li>下拉菜单项中的分割线
+  原理：
+  .dropdown-menu .divider {
+  height: 1px;
+  margin: 9px 0;
+  overflow: hidden;
+  background-color: #e5e5e5;
+}
+
+  <li role="presentation" class="dropdown-header">菜单头部</li>

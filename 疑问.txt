@@ -3,13 +3,17 @@
 overflow
 clear
 
-> +
+display:inline-block;
+
+float :none和left区别
+
+""  > +
 
 :nth-child
 
 position: absolute;
 
-Î±Àà :focus  :active
+伪类 :focus  :active
 
 -webkit-box-shadow: inset 0 1px 1pxrgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
 box-shadow: inset 0 1px 1pxrgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
@@ -23,12 +27,12 @@ right和margin right
 
 aria-labelledb
 
+text-decoration: none;
 
-.dropdown-menu {
-  position: absolute;/*设置绝对定位，相对于父元素div.dropdown*/
-  top: 100%;/*让下拉菜单项在父菜单项底部，如果父元素不设置相对定位，该元素相对于body元素*/
-  left: 0;
-  z-index: 1000;/*让下拉菜单项不被其他元素遮盖住*/
-  display: none;/*默认隐藏下拉菜单项*/
-。。。。。。。。。。。。。
-}
+:before :after
+
+top和bottom的值，代表什么含义，auto和100%
+
+ border: transparent
+
+ !important;

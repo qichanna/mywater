@@ -705,3 +705,198 @@ hide.bs.modal
 hidden.bs.modal
 
 
+
+.navbar-static-top
+
+
+javascript的下拉菜单
+$(function(){
+    $(".dropdown-toggle").dropdown();
+})
+或者(用到jquery)
+$(".dropdown-toggle").one("click",function(){
+    $(this).dropdown("toggle");
+})
+
+data-spy="scroll"被监控的data属性
+data-offset="60" 滚动条偏移位置
+
+
+body中滚动监控导航条
+<body data-spy="scroll" data-target="#navbar-menu">
+    <div class="navbar navbar-default navbar-fixed-top" id="navbar-menu">
+    </div>
+    <h3 id="blog">Blog</h3>
+    <p>…</p>
+</body>
+
+js控制滚动条：
+<nav id="navbar-menu" class="navbar navbar-default navbar-static" role="navigation">
+  …
+</nav>
+<div class="scrollspy" id="scrollspy">
+  …
+</div>
+$(function(){
+    $("#scrollspy").scrollspy({
+        target: "#navbar-menu"
+    });
+})
+
+
+选项卡面板切换
+<!-- 每一项 -->
+<ul id="myTab2" class="nav nav-tabs" role="tablist"> //nav-tabs可以改成pills
+    <li><a href="#a" role="tab" data-toggle="tab">娱乐</a></li> //data-toggle的tab可以改成pill
+    <li><a href="#b" role="tab" data-toggle="tab">房产</a></li>
+    <li><a href="#c" role="tab" data-toggle="tab">国内</a></li>
+  <li><a href="#d" role="tab" data-toggle="tab">国外</a></li> 
+</ul>
+<!-- 选项卡面板 -->
+<div id="myTabContent2" class="tab-content">
+  <div class="tab-pane active fade in" id="a">娱乐内容面板</div> //fade渐入渐出 in默认显示（不加开始就不显示）
+  <div class="tab-pane fade" id="b">房产内容面板</div>
+  <div class="tab-pane fade" id="c">国内内容面板</div>
+  <div class="tab-pane fade" id="d">国外内容面板</div> 
+</div>
+
+js调用：
+$(function(){
+    $("#myTab2 a").click(function(e){
+        e.preventDefault();
+        $(this).tab("show");
+    });
+})
+
+
+提示框
+<button type="button" 
+        class="btnbtn-default" 
+        data-toggle="tooltip" 
+        data-placement="left" 
+        data-original-title="提示框居左">
+        提示框居左
+</button>
+
+
+js方法提示框:
+$(function(){
+    $('#myTooltip').tooltip({
+       title:"我是一个提示框，我在顶部出现",
+       placement:'top'
+    });
+});
+或者：
+$(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+});
+
+
+
+弹出框：和提示框差不多，多了data-content可以显示
+<button type="button" 
+        class="btnbtn-default" 
+        data-container="body" 
+        data-placement="bottom" 
+        data-toggle="popover" 
+        data-original-title="Bootstrap弹出框标题" 
+        data-content="Bootstrap弹出框的内容" >
+        猛击我吧
+</button>
+
+
+js方法弹出框：
+$(function(){
+    $('[data-toggle="popover"]').popover();
+});
+或者
+$(function(){
+    $('#myPopover').popover({
+        title:"我是弹出框的标题",
+        content:"我是弹出框的内容",
+        placement:"top"
+    });
+});
+
+
+警告框:带关闭按钮
+<div class="alert alert-warning" data-dismiss="alert" role="alert" id="myAlert"> // 主要就是要有data-dismiss="alert"
+    <h4>谨防被骗</h4>
+    <p>请确认您转账的信息是你的亲朋好友，不要轻意相信不认识的人...</p>
+    <button type="button"  class="btnbtn-danger" id="close">关闭</button>
+</div>
+
+js方法警告框:
+$(function(){
+    $("#close").on("click",function(){
+        $(this).alert("close");
+    });
+});
+
+
+
+js控制按钮：
+<button class="btnbtn-primary" data-loading-text="正在加载中,请稍等..." type="button" id="loaddingBtn">加载</button>
+$(function(){
+    $("#loaddingBtn").click(function () {
+        $(this).button("loading");
+      });
+});
+
+
+按钮样式的单选组
+<div class="btn-group" data-toggle="buttons"> //加入data-toggle="buttons"后下面的radio前面的圆点就不会出现了
+    <label class="btn btn-primary">
+        <input type="radio" name="options" id="options1">男
+    </label>
+    <label class="btn btn-primary">
+        <input type="radio" name="options" id="options2">女
+    </label>
+    <label class="btn btn-primary">
+        <input type="radio" name="options" id="options3">未知
+    </label>
+</div>
+
+
+按钮样式的多选组
+<div class="btn-group" data-toggle="buttons">//加入data-toggle="buttons"后下面的checkbox前面的勾选就不会出现了
+    <label class="btn btn-primary">
+        <input type="checkbox" name="options" id="options1">电影
+    </label>
+    <label class="btn btn-primary">
+        <input type="checkbox" name="options" id="options2">音乐
+    </label>
+    <label class="btn btn-primary">
+        <input type="checkbox" name="options" id="options3">游戏
+    </label>
+    <label class="btn btn-primary">
+        <input type="checkbox" name="options" id="options4">摄影
+    </label>
+</div>
+
+按钮状态切换:类似于按下去不会弹起来
+<button type="button" data-toggle="button" class="btn btn-primary">确认</button>
+
+
+
+js控制按钮显示效果的例子：
+<div class="btn-group" data-toggle="buttons">
+    <button type="button" data-toggle="button" class="btn btn-primary" id="mybutton" data-complete-text="Loading finished" data-loading-text="Loading...">确认</button>
+</div>
+
+ $(function() {
+      $("#mybutton").click(function(){
+         $(this).button('loading').delay(1000).queue(function() {
+            $(this).button('complete');
+         });        
+      });
+ });
+
+
+ 手风琴(collapse)和轮播:
+ 比较多，看网上的代码
+ 固定有点烦，在看看
+
+
+
+

@@ -1,4 +1,4 @@
-﻿intellij ÐÐÏÂÒÆ¶¯£¬¹â±ê¶¨Î»µ½Ä©Î²
+﻿intellij 列模式  移动到行头行尾  在上面插入一行空行
 
 overflow
 clear
@@ -7,13 +7,13 @@ display:inline-block;
 
 float :none和left区别
 
-""  > +
+""  > +  (>代表直接子类元素，也就是一代子类元素， 空格代表所有子类元素)
 
 :nth-child
 
 position: absolute;
 
-伪类 :focus  :active
+伪类 :focus  :active  :hover    (可以看成状态类)
 
 -webkit-box-shadow: inset 0 1px 1pxrgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
 box-shadow: inset 0 1px 1pxrgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
@@ -27,12 +27,23 @@ right和margin right
 
 aria-labelledb
 
-text-decoration: none;
-
 :before :after
 
 top和bottom的值，代表什么含义，auto和100%
 
  border: transparent
 
- !important;
+ !important;(把某个css中的一个css权重值提到最搞，要跟着属性值写，写在分号前面,例如:p{color:red!important;})
+
+font-family:"Microsoft Yahei"; 字体
+font-family:"Microsoft Yahei"；字号，颜色
+font-weight:bold；粗体
+font-style:italic; 斜体
+text-decoration:underline; 下划线
+text-decoration:line-through; 删除线
+text-decoration:none； 没有什么东西
+p{text-indent:2em;} 段落缩进2倍字体大小
+p{line-height:1.5em;} 行高1.5倍字体大小
+letter-spacing:50px; 字母之间间隔
+word-spacing:50px; 单词之间间隔
+text-align:center(left,right)  块状元素中的文本、图片居中(居左，居右)

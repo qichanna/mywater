@@ -197,3 +197,6 @@ AOP方面：
 --------------------------------
 forward:转发到一个新界面，自己的就不显示了
 include：还是显示自己的，但是在自己中还显示include的那个界面
+response.sendRedirect(req.getContextPath()+"/main.jsp");
+request.getRequestDispatcher("main.jsp").forward(servletRequest, servletResponse);
+request.getRequestDispatcher("main.jsp").include(request, response);

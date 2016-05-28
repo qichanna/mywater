@@ -192,3 +192,8 @@ initMethod和destoryMethod等同于@PostConstruct和@preDestroy
 
 
 AOP方面：
+
+
+--------------------------------
+forward:转发到一个新界面，自己的就不显示了
+include：还是显示自己的，但是在自己中还显示include的那个界面

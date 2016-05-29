@@ -200,3 +200,8 @@ include：还是显示自己的，但是在自己中还显示include的那个界
 response.sendRedirect(req.getContextPath()+"/main.jsp");   //sendRedirect的路径好像是相对路径，在当前访问的路径下+括号中的参数，作为最终路径
 request.getRequestDispatcher("main.jsp").forward(servletRequest, servletResponse);
 request.getRequestDispatcher("main.jsp").include(request, response);
+
+web加载顺序:监听器 > 过滤器 > servlet
+
+request.getAttribute和request.getParameter区别：
+request.getAttribute只能获取setAttribute中的值，request.getParameter获取的是类似https://www.liqi.com/username=aaa这里的参数

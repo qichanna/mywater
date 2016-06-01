@@ -205,3 +205,7 @@ web加载顺序:监听器 > 过滤器 > servlet
 
 request.getAttribute和request.getParameter区别：
 request.getAttribute只能获取setAttribute中的值，request.getParameter获取的是类似https://www.liqi.com/username=aaa这里的参数
+
+
+---------------------------------------------------
+HandlerInterceptor和WebRequestInterceptor都可以作为拦截器接口

@@ -55,6 +55,9 @@ github
 
 git clone git@github.com:qichanna/Imserver.git
 
+git config --global user.name "qichanna"
+git config --global user.email "qichanna@xxx.com"
+
 -------------------------------------------------
 maven
 

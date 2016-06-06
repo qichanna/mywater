@@ -55,8 +55,17 @@ github
 
 git clone git@github.com:qichanna/Imserver.git
 
+变更账户
 git config --global user.name "qichanna"
 git config --global user.email "qichanna@xxx.com"
+
+
+
+git pull出现Cannot pull with rebase: You have unstaged changes错误,那说明你有修改过的文件.
+git stash
+git pull --rebase （每次push之前最好这样做一次）
+git push ....
+之后用git stash pop stash@{0}回复你之前修改的文件
 
 -------------------------------------------------
 maven

@@ -1,0 +1,18 @@
+Rect startBounds = new Rect();
+Point globalOffset = new Point();
+view.getGlobalVisibleRect(startBounds,globalOffset);
+getGlobalVisibleRect可以得到gaiview在整个界面中上下左右边距赋给rect，point是左上角的坐标
+
+view.setPivotX(0f);
+view.setPivotY(0f);
+
+AnimatorSet set = new AnimatorSet();
+set
+     .play(ObjectAnimator.ofFloat(expandedImageView, View.X, startBounds.left,
+             finalBounds.left))
+     .with(ObjectAnimator.ofFloat(expandedImageView, View.Y, startBounds.top,
+             finalBounds.top))
+     .with(ObjectAnimator.ofFloat(expandedImageView, View.SCALE_X, startScale, 1f))
+     .with(ObjectAnimator.ofFloat(expandedImageView, View.SCALE_Y, startScale, 1f));
+set.setInterpolator(new DecelerateInterpolator());
+以view的(0,0)左边为支点进行动画

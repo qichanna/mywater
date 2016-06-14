@@ -16,3 +16,8 @@ set
      .with(ObjectAnimator.ofFloat(expandedImageView, View.SCALE_Y, startScale, 1f));
 set.setInterpolator(new DecelerateInterpolator());
 以view的(0,0)左边为支点进行动画
+
+
+当view发送改变时候，可以加入改变的动画
+1.android:animateLayoutChanges="true", 该view需要有这个属性
+2.如果要自定义动画， create a LayoutTransition object and supply it to the layout with the setLayoutTransition() method.

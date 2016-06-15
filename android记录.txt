@@ -21,3 +21,6 @@ set.setInterpolator(new DecelerateInterpolator());
 当view发送改变时候，可以加入改变的动画
 1.android:animateLayoutChanges="true", 该view需要有这个属性
 2.如果要自定义动画， create a LayoutTransition object and supply it to the layout with the setLayoutTransition() method.
+
+
+在 onCreate()中执行finish()会立刻调用onDestroy()，而不调用任何其他 生命周期方法。极端情况下，系统可能会仅终止应用进程，而不会调用Activity的最终 onDestroy() 回调，因此您使用 onStop() 释放可能泄露内存的资源非常重要。

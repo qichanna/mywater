@@ -58,5 +58,22 @@ onRestoreInstanceState()方法在onStart()之后调用，比onCreate()后面一�
 删除文件: myFile.delete()
 删除内部存储中文件可用: myContext.deleteFile(fileName);
 getCacheDir()中创建的需要手动删除
-     
+
+//调用其他APP应用
+
+判断是否有符合的intent
+1.
+     PackageManager packageManager = getPackageManager();
+     List<ResolveInfo> activities = packageManager.queryIntentActivities(mapIntent, 0);
+     boolean isIntentSafe = activities.size() > 0;
+
+     if (isIntentSafe) {
+          startActivity(mapIntent);
+     }
+   
+2.
+     Intent chooser = Intent.createChooser(intent, title);
+     if (intent.resolveActivity(getPackageManager()) != null) {
+          startActivity(chooser);
+     }
      

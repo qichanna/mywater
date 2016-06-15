@@ -27,4 +27,22 @@ set.setInterpolator(new DecelerateInterpolator());
 
 onRestoreInstanceState()方法在onStart()之后调用，比onCreate()后面一些，所以也可以选择在这里恢复Bundle，两者的区别在于onRestoreInstanceState()不需要自己判断是否为空，而且onCreate()则需要。
 
+
+//保存文件
+内部存储路径: getFilesDir(),  getCacheDir()
+外部存储路径: getExternalFilesDir()
+
 当用户卸载您的应用时，只有在您通过 getExternalFilesDir() 将您的应用的文件保存在目录中时，系统才会从此处删除您的应用的文件。
+
+第一种:   
+     File file = new File(context.getFilesDir(), filename);
+     FileOutputStream outputStream = openFileOutput(file, Context.MODE_PRIVATE);
+     outputStream.write(bitmap.getBytes());
+     outputStream.close();
+     
+第二种:
+     File file = new File(context.getFilesDir(), filename);
+     FileOutputStream fos = new FileOutputStream(file);
+     bitmap.compress(Bitmap.CompressFormat.JPEG, 60, fos);
+     
+     

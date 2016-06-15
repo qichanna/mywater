@@ -24,3 +24,5 @@ set.setInterpolator(new DecelerateInterpolator());
 
 
 在 onCreate()中执行finish()会立刻调用onDestroy()，而不调用任何其他 生命周期方法。极端情况下，系统可能会仅终止应用进程，而不会调用Activity的最终 onDestroy() 回调，因此您使用 onStop() 释放可能泄露内存的资源非常重要。
+
+onRestoreInstanceState()方法在onStart()之后调用，在onCreate()之前，所以恢复也可以选择前者，两者的区别在于onRestoreInstanceState()不需要自己判断是否为空，而且onCreate()则需要。

@@ -30,9 +30,9 @@ onRestoreInstanceState()方法在onStart()之后调用，比onCreate()后面一�
 
 //保存文件
 内部存储路径: getFilesDir(),  getCacheDir()
-外部存储路径: getExternalFilesDir()
+外部存储路径: getExternalFilesDir(),  getExternalStoragePublicDirectory()
 
-当用户卸载您的应用时，只有在您通过 getExternalFilesDir() 将您的应用的文件保存在目录中时，系统才会从此处删除您的应用的文件。
+当用户卸载您的应用时，只有在您通过 getExternalFilesDir() 将您的应用的文件保存在目录中时，系统才会从此处删除您的应用的文件。如果不想应用被删除时删除文件，则用getExternalStoragePublicDirectory()
 
 第一种:   
      File file = new File(context.getFilesDir(), filename);
@@ -44,5 +44,19 @@ onRestoreInstanceState()方法在onStart()之后调用，比onCreate()后面一�
      File file = new File(context.getFilesDir(), filename);
      FileOutputStream fos = new FileOutputStream(file);
      bitmap.compress(Bitmap.CompressFormat.JPEG, 60, fos);
+     
+检查外部存储是否可用:
+    String state = Environment.getExternalStorageState();
+    if (Environment.MEDIA_MOUNTED.equals(state)) {
+        return true;
+    }
+    return false;
+    
+可用空间: getFreeSpace() 
+存储卷中空间: getTotalSpace() 
+
+删除文件: myFile.delete()
+删除内部存储中文件可用: myContext.deleteFile(fileName);
+getCacheDir()中创建的需要手动删除
      
      

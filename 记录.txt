@@ -27,6 +27,27 @@ sudo su - root
 -------------------------------------------------------------------
 shadowsocks
 
+编辑json文件
+vi /etc/shadowsocks.json
+
+{
+   "timeout":300,
+   "method":"aes-256-cfb",
+   "server":"104.128.87.141",
+   "port_password":
+    {
+        "40001":"liqi7@lenovo.com",
+        "40002":"liqi7@lenovo.com",
+        "40003":"liqi7@lenovo.com"
+    },
+   "_comment":
+    {
+        "40001":"liqi",
+        "40002":"zwj",
+        "40003":"lyf40003"
+    }
+}
+
 启动多用户
 开始：ssserver -c /etc/shadowsocks.json -d start
 结束：ssserver -c /etc/shadowsocks.json -d stop

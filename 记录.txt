@@ -88,6 +88,33 @@ git pull --rebase （每次push之前最好这样做一次）
 git push ....
 之后用git stash pop stash@{0}回复你之前修改的文件
 
+
+ubuntu部署本地shadowsocks客户端
+1.命令行
+在某个文件夹下面建立shadowsocks.json(比如在shadowsocks下)
+
+{
+        "server":"111.111.11.11",
+        "server_port":"xxxxx",
+        "local_port":"8080",
+        "password":"12345",
+        "timeout":600,
+        "method":"aes-256-cfb"
+}
+
+最后运行命令sslocal -c ./shadowsocks/shadowsocks.json
+
+2.Shadowsocks-Qt5(GUI 版本)
+sudo add-apt-repository ppa:hzwhuang/ss-qt5
+sudo apt-get update
+sudo apt-get install shadowsocks-qt5
+
+
+在虚拟机中用shadowsocks代理用git clone命令报错：Failed to receive SOCKS4 connect request ack
+执行一下命令:
+1.get config --global http.proxy 'socks5://127.0.0.1:1080'
+2.get config --global https.proxy 'socks5://127.0.0.1:1080'
+
 -------------------------------------------------
 maven
 

@@ -113,8 +113,8 @@ sudo apt-get install shadowsocks-qt5
 在虚拟机中用shadowsocks代理用git clone命令报错：Failed to receive SOCKS4 connect request ack
 执行一下命令:
 a)使用socks5代理服务器
-1.get config --global http.proxy 'socks5://127.0.0.1:1080'
-2.get config --global https.proxy 'socks5://127.0.0.1:1080'
+1.git config --global http.proxy 'socks5://127.0.0.1:1080'
+2.git config --global https.proxy 'socks5://127.0.0.1:1080'
 
 b)使用http/https代理服务器
  1.git config --global http.proxy 'http://www.baidu.com'

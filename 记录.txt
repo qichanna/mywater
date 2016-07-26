@@ -171,3 +171,29 @@ ctrl+shift+v    粘贴并格式化
 1: time /t 获得现在的时间, 假如是15:33
 2: 输入 at 15:34 /interactive taskmgr.exe （就是说输入一分钟后运行）
 3:然后再执行以上taskkill相关命令
+
+----------------------------------------------------
+文件类型	              执行动作	    命令
+.tar	                    解包	     tar xvf FileName.tar
+.tar	                    打包	     tar cvf FileName.tar DirName
+.gz	                     解压1	    gunzip FileName.gz
+.gz	                     解压2	    gzip -d FileName.gz
+.gz	                     压缩	     gzip FileName
+.tar.gz 和 .tgz	         解压	     tar zxvf FileName.tar.gz
+.tar.gz 和 .tgz	         压缩	     tar zcvf FileName.tar.gz DirName
+.bz2	                    解压1	    bzip2 -d FileName.bz2
+.bz2	                    解压2	    bunzip2 FileName.bz2
+.bz2	                    压缩	     bzip2 -z FileName
+.tar.bz2	                解压	     tar jxvf FileName.tar.bz2
+.tar.bz2	                压缩	     tar jcvf FileName.tar.bz2 DirName
+.bz	                     解压1	    bzip2 -d FileName.bz
+.bz	                     解压2	    bunzip2 FileName.bz
+.tar.bz	                 解压	     tar jxvf FileName.tar.bz
+.Z	                      解压	     uncompress FileName.Z
+.Z	                      压缩	     compress FileName
+.tar.Z	                  解压	     tar Zxvf FileName.tar.Z
+.tar.Z	                  压缩	     tar Zcvf FileName.tar.Z DirName
+.zip	                    解压	     unzip FileName.zip
+.zip	                    压缩	     zip FileName.zip DirName
+.rar	                    解压	     rar x FileName.rar
+.rar	                    压缩	     rar a FileName.rar DirName

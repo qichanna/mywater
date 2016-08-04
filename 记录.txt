@@ -88,6 +88,10 @@ git pull --rebase （每次push之前最好这样做一次）
 git push ....
 之后用git stash pop stash@{0}回复你之前修改的文件
 
+git rebase-update时出现Cannot rebase-update with detached head + uncommitted changes.执行下面命令
+1.git reset --hard
+2.git clean -fd
+
 
 ubuntu部署本地shadowsocks客户端
 1.命令行

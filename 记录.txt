@@ -211,3 +211,7 @@ Ctrl+Shift+K：删除整行
 .zip	                    压缩	     zip FileName.zip DirName
 .rar	                    解压	     rar x FileName.rar
 .rar	                    压缩	     rar a FileName.rar DirName
+
+
+ubuntu 16.04中有些软件菜单栏消失问题
+执行restart unity-panel-service

@@ -215,3 +215,6 @@ Ctrl+Shift+K：删除整行
 
 ubuntu 16.04中有些软件菜单栏消失问题
 执行restart unity-panel-service
+
+
+舞台为linux root密码 JWM8FMxGYRuhenfd

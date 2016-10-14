@@ -218,3 +218,11 @@ ubuntu 16.04中有些软件菜单栏消失问题
 
 
 舞台为linux root密码 JWM8FMxGYRuhenfd
+
+
+Cannot rebase: You have unstaged changes.
+那说明你有修改过的文件
+Git stash
+git pull --rebase （每次push之前最好这样做一次）
+git push ....
+之后用git stash pop stash

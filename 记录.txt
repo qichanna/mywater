@@ -226,3 +226,12 @@ Git stash
 git pull --rebase （每次push之前最好这样做一次）
 git push ....
 之后用git stash pop stash
+
+
+
+
+android studio开发无线调试真机
+手机要联到电脑同一局域网内，然后：
+adb tcpip 5555
+adb connect http://xxx.xxx.xxx.xxx
+xxx是你手机的ip

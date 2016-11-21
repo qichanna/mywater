@@ -235,3 +235,14 @@ android studio开发无线调试真机
 adb tcpip 5555
 adb connect http://xxx.xxx.xxx.xxx
 xxx是你手机的ip
+
+
+
+
+------------------------
+adb命令导出android数据库
+1.adb shell
+2.cd data/data/..../databases/
+3.cp xxx.db /mnt/sdcard
+4.exit退出adb shell
+5.adb pull /mnt/sdcard/xxx.db d:/abc

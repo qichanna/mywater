@@ -246,3 +246,5 @@ adb命令导出android数据库
 3.cp xxx.db /mnt/sdcard
 4.exit退出adb shell
 5.adb pull /mnt/sdcard/xxx.db d:/abc
+-----------------------
+有时候可以试试adb root命令，可以直接查看data/data

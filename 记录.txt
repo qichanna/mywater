@@ -248,3 +248,31 @@ adb命令导出android数据库
 5.adb pull /mnt/sdcard/xxx.db d:/abc
 -----------------------
 有时候可以试试adb root命令，可以直接查看data/data
+
+
+
+----------------------------------卸载预装app
+adb root
+adb remount
+cd priv-app
+cd xxx
+rm xx.apk
+reboot
+
+1.遇到error: more than one device/emulator，执行如下命令:
+  adb -s NHTC170036 shell(root等)
+  
+2.遇到不能remount，log如下
+  dm_verity is enabled on the system partition.
+  Don't allow remount.
+  Use "adb disable-verity" to disable verity.
+  remount failed
+执行如下命令：
+  1.adb disable-verity and than adb reboot
+  2.重复之前命令：
+    adb root
+    adb remount
+    cd priv-app
+    cd xxx
+    rm xx.apk
+    reboot

@@ -1,0 +1,60 @@
+line-height和height
+inherit
+
+nav和section标签
+
+top和margin-top
+width和max-width
+list-style:none;
+
+relative
+.a
+{
+  position:relative;
+  top:68px;
+  left:50px;
+}
+
+.aaa > div 第一个子元素
+
+.aaa > div
+
+.aaa:after
+{
+  content:'';
+  display:block;
+  clear:both;
+}
+
+
+.aaa > * 所有直系子元素
+
+.aaa > nth-child（odd）
+{
+  
+｝
+所有子元素的奇数
+
+.aaa > fitst-child
+.aaa > nth-child（2）
+
+box-sizing
+
+background:#444 url(../xxx);
+background-attachment:fixed;
+background-repeat:no-repeat;
+background-size:cover;
+background-position:center center;
+
+
+
+
+
+
+
+
+margin:0px auto   块水平居中
+text-align:        文字水平居中
+transform：rotate（40deg）
+
+text-indent:666px

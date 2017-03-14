@@ -62,3 +62,5 @@ text-indent:666px
 
 <table summary="dd"> summary简介，不会被显示
   <caption></caption>  标题显示的表格上方
+<a href="" title="dd"></a>title鼠标滑过时候显示
+<img alt="xx" title="dd"></a>title鼠标滑过时候显示,alt下载失败时显示的文本

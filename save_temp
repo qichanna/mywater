@@ -1,3 +1,6 @@
 1. staticLayout
 2.on touchevent
 3.scrollTo和scrollBy，改造startScroll
+4.viewstub
+5.listview复用问题
+6.cloneable

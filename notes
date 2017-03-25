@@ -4,6 +4,9 @@ inherit
 nav和section标签
 
 top和margin-top
+只有设置了position:absolute或者relative才有效，一般大多数会设置relative，这样top和margin：0 auto不会相互影响，他们是相对于父元素的位置偏移
+margin的话是相对于同级元素的位置偏移，如果没有同级元素，则是相对于父元素的同级元素的位置偏移
+
 width和max-width
 list-style:none;
 
@@ -64,3 +67,4 @@ text-indent:666px
   <caption></caption>  标题显示的表格上方
 <a href="" title="dd"></a>title鼠标滑过时候显示
 <img alt="xx" title="dd"></a>title鼠标滑过时候显示,alt下载失败时显示的文本
+标签的权值为1，类选择符的权值为10，ID选择符的权值最高为100

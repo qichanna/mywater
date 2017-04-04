@@ -17,3 +17,34 @@ state_press
 
 
 src和background
+
+/*************************动画99/
+svg editor
+
+imageView可以直接用app:srcCompat="@drawable"
+
+button需要放到selector中，并在activity中放入
+static｛
+          appcompatXXXXXXXXXXX.xxxxxxxxx（true）
+｝
+
+
+trimPathStart
+
+0  完全显示(trimPathStart初态或者trimPathEnd终态)
+1  完全不显示（被截取了）
+
+
+
+onsizechanged的oldx值
+
+行格式化 比如+左右空格
+
+strokeLineCap
+
+DashPathEffect
+
+canvas.save和canvas.translate和canvas.restore
+
+Math.atan2和1，Math.abs
+/******************************************/

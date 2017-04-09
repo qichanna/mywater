@@ -38,6 +38,9 @@ trimPathStart
 
 onsizechanged的oldx值
 
+viewpager惰性加载
+layoutinflter二三参数区别
+
 行格式化 比如+左右空格
 
 strokeLineCap

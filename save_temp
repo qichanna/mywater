@@ -50,4 +50,5 @@ DashPathEffect
 canvas.save和canvas.translate和canvas.restore
 
 Math.atan2和1，Math.abs
+DashPathEffect
 /******************************************/

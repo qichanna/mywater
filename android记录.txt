@@ -77,3 +77,7 @@ getCacheDir()中创建的需要手动删除
           startActivity(chooser);
      }
      
+     
+getAction包含操作（比如按下，抬起之类的）和信息（包括坐标等等）
+getActionMasked只包含操作
+    和 

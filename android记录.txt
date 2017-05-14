@@ -80,3 +80,9 @@ getCacheDir()中创建的需要手动删除
      
 getAction包含操作（比如按下，抬起之类的）和信息（包括坐标等等）
 getActionMasked只包含操作
+
+
+谷歌支持HttpURLConnection原因有：
+1.谷歌不愿意维护HTTPclient ，因为HTTPclient兼容性问题， 而支持HttpURLConnection
+2.HttpURLConnection API简便而且包小，对安卓很合适
+3.HttpURLConnection 对于提高速度和节省电池有帮助，同时谷歌也愿意在这方面花时间研究去更进一步的提高性能。

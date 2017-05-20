@@ -1,1 +1,27 @@
+1. 有序集合：list，tuple，str和unicode(list相当于list，tuple相当于数组，大小不可变)
+2. 无序集合：set，内容不重复，重复了会自动过滤
+3. 无序集合并且具有 key-value 对：dict
+
+
+索引迭代，其实返回的是tuple
+for index, name in enumerate(L):
+...     print index, '-', name
+
+字典value迭代
+1.返回的是list
+for v in d.values():
+    print v
+
+2.不是list
+for v in d.itervalues():
+    print v
+    
+字典同时迭代key和value
+1.返回的是list
+for key, value in d.items():
+     print key, ':', value
+     
+2.不是list
+for key, value in d.iteritems():
+     print key, ':', value
 

@@ -91,3 +91,10 @@ getActionMasked只包含操作
 canvas.save后如果有旋转画布等操作，坐标会一起旋转过去，也就是说坐标相对于画布不变
 canvas.restore执行后，坐标就会变为相对于屏幕左上角为（0，0）这样的
 需要注意的是restore只能回复到save之后，如果在save前已经调用过其他操作画布的方法，是不能通过restore还原的
+例如：
+canvas.save()
+canvas.rotate(90, px/2, py/2);
+canvas.restore()
+save前左上角坐标为(0,0)
+save后由于旋转了90度，右上角坐标为(0,0)
+restore是恢复到save前的状态，即左上角又变为(0,0)了

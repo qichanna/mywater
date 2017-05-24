@@ -86,3 +86,8 @@ getActionMasked只包含操作
 1.谷歌不愿意维护HTTPclient ，因为HTTPclient兼容性问题， 而支持HttpURLConnection
 2.HttpURLConnection API简便而且包小，对安卓很合适
 3.HttpURLConnection 对于提高速度和节省电池有帮助，同时谷歌也愿意在这方面花时间研究去更进一步的提高性能。
+
+
+canvas.save后如果有旋转画布等操作，坐标会一起旋转过去，也就是说坐标相对于画布不变
+canvas.restore执行后，坐标就会变为相对于屏幕左上角为（0，0）这样的
+需要注意的是restore只能回复到save之后，如果在save前已经调用过其他操作画布的方法，是不能通过restore还原的

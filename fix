@@ -1,6 +1,6 @@
-正则
+正则 //XXXXXXXXXXX
 base64
 Executors.newFixedThreadPool
 java 锚点问题
 
-（问秋菊）setpersenter为什么写在view中，在persenterFragment中可以吗
+new GsonBuilder().setDateFormat

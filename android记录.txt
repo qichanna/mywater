@@ -98,3 +98,27 @@ canvas.restore()
 save前左上角坐标为(0,0)
 save后由于旋转了90度，右上角坐标为(0,0)
 restore是恢复到save前的状态，即左上角又变为(0,0)了
+
+
+----------------------------------------------------------------------
+activity四种状态：
+running：正常情况，在宅顶
+paused:失去焦点，被一个非全屏的activity，或者被一个透明的界面放在上面，用户对该activity操作没反应
+stopped：被一个activity完全覆盖
+kill:系统回收
+
+
+activity启动 onCreate()->onStart()->onResume()
+onStart()在前台可见但还不能和用户交互，不能和用户操作
+onResume()在前台既可见，又可交互
+
+按home onPause()(activity还可见)->onStop()（已经不可见，被完全覆盖）
+
+按home键后，再从桌面回到原activity onRestart()->onStart()->onResume()
+
+退出activity onPause()->onStop()->onDestroy()(回收工作和资源释放)
+
+
+
+android进程优先级
+前台/可见/服务/后台/空(例如作为缓存之类的)

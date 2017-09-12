@@ -120,5 +120,9 @@ onResume()在前台既可见，又可交互
 
 
 
+Activity:
 android进程优先级
 前台/可见/服务/后台/空(例如作为缓存之类的)
+任务棧
+四种启动模式(standard,singletop,singletask,singleinstance)
+scheme

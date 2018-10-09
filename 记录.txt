@@ -284,3 +284,6 @@ reboot
 3. git remote add origin https://github.com/zlxzlxzlx/Test.git
 4. git pull origin master（第一次提交可失败）
 5. git push -u origin master
+
+https://www.cnblogs.com/zlxbky/p/7727895.html
+https://www.cnblogs.com/tig666666/p/8425865.html

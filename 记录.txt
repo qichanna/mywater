@@ -49,6 +49,7 @@ vi /etc/shadowsocks.json
 }
 
 启动多用户
+      /etc/init.d/shadowsocks start
 开始：ssserver -c /etc/shadowsocks.json -d start
 结束：ssserver -c /etc/shadowsocks.json -d stop
 

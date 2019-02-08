@@ -58,6 +58,10 @@ vi /etc/shadowsocks.json
 2. 点i进入编辑模式，将里面的最后带有ssserver的行注释掉，然后加入ssserver -c /etc/shadowsocks.json -d start,再点Esc，然后:wq保存退出
 
 
+/etc/init.d/shadowsocjs start
+/etc/init.d/shadowsocjs stop
+
+
 
 
 --------------------------------------------------------------------------------

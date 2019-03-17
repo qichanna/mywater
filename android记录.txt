@@ -130,4 +130,4 @@ scheme
 
 out關鍵字 理解成？ extends T，都是T的子類或者T
 in關鍵字  理解成？ super T，都是T的超類或者T
-<*>理解成object
+<*>理解成<object>任何類型

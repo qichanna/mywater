@@ -53,6 +53,11 @@ vi /etc/shadowsocks.json
 开始：ssserver -c /etc/shadowsocks.json -d start
 结束：ssserver -c /etc/shadowsocks.json -d stop
 
+开始2:  /etc/init.d/shadowsocks start
+结束2: /etc/init.d/shadowsocks stop
+vi /etc/shadowsocks.json
+
+
 添加到开机启动项
 1. 输入vi /etc/rc.local
 2. 点i进入编辑模式，将里面的最后带有ssserver的行注释掉，然后加入ssserver -c /etc/shadowsocks.json -d start,再点Esc，然后:wq保存退出
@@ -60,6 +65,7 @@ vi /etc/shadowsocks.json
 
 /etc/init.d/shadowsocjs start
 /etc/init.d/shadowsocjs stop
+
 
 
 

@@ -65,7 +65,7 @@ vi /etc/shadowsocks.json
 
 /etc/init.d/shadowsocjs start
 /etc/init.d/shadowsocjs stop
-
+https://blog.csdn.net/weixin_43474271/article/details/83216323
 
 
 

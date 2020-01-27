@@ -304,5 +304,8 @@ https://hellojava.iteye.com/blog/2342004
 
 
 
-
-sudo service nginx reload/stop/start
+--------------------启动ghost-----------
+1.启动mysql   service mysqld restart(/stop等,目前配置默认启动mysql，这步可以不执行)---耗内存
+2.切换到非root用户  su liqi
+3.到该目录下启动ghost cd /home/wwwroot/ghost  执行ghost start  ---耗内存
+4.启动 nginx  sudo service nginx reload/stop/start

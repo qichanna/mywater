@@ -70,6 +70,20 @@ https://blog.csdn.net/weixin_43474271/article/details/83216323
 
 
 
+#设置开机自启命令
+systemctl enable shadowsocks
+
+#启动命令
+systemctl start shadowsocks
+
+#查看状态命令
+systemctl status shadowsocks
+
+#关闭服务
+systemctl stop shadowsocks
+
+https://www.4spaces.org/install-shadowsocks-on-centos-7/
+
 --------------------------------------------------------------------------------
 github
 

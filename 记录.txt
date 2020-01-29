@@ -69,6 +69,7 @@ https://blog.csdn.net/weixin_43474271/article/details/83216323
 
 
 
+cloudcone
 
 #设置开机自启命令
 systemctl enable shadowsocks

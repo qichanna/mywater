@@ -90,6 +90,12 @@ https://ericwww.github.io/2018/03/05/DeployShadowsocks/
 $ ssserver -c /etc/shadowsocks.json -d start #启动
 $ ssserver -c /etc/shadowsocks.json -d stop #停止
 
+
+
+https://nerdvm.racknerd.com/
+Username: vmuser8119
+Password: e746adc484 (If you already have access to the control panel please use your existing password)
+
 --------------------------------------------------------------------------------
 github
 

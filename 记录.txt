@@ -85,6 +85,11 @@ systemctl stop shadowsocks
 
 https://www.4spaces.org/install-shadowsocks-on-centos-7/
 
+
+https://ericwww.github.io/2018/03/05/DeployShadowsocks/
+$ ssserver -c /etc/shadowsocks.json -d start #启动
+$ ssserver -c /etc/shadowsocks.json -d stop #停止
+
 --------------------------------------------------------------------------------
 github
 

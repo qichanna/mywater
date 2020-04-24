@@ -335,3 +335,11 @@ https://hellojava.iteye.com/blog/2342004
 2.切换到非root用户  su liqi
 3.到该目录下启动ghost cd /home/wwwroot/ghost  执行ghost start  ---耗内存
 4.启动 nginx  sudo service nginx reload/stop/start
+
+
+
+------下载编译moto rom----
+1.下载:  repo init -u ssh://gerrit.mot.com:29418/home/repo/dev/platform/android/platform/manifest/q.git -b mq -m r-qsh2020.xml --repo-url=ssh://gerrit.mot.com/home/repo/dev/platform/android/repo.git
+2. gsync -u liqi7
+3.source /opt/conf/moto.conf 
+4.编译: motorola/build/bin/build_device.bash -b nightly -p smith_retcn -g -j12 2>&1 | tee build.log

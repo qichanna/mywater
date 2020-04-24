@@ -343,3 +343,6 @@ https://hellojava.iteye.com/blog/2342004
 2. gsync -u liqi7
 3.source /opt/conf/moto.conf 
 4.编译: motorola/build/bin/build_device.bash -b nightly -p smith_retcn -g -j12 2>&1 | tee build.log
+
+单独下载如下:
+git clone ssh://gerrit.mot.com:29418/home/repo/dev/platform/android/motorola/cbs/vzw/packages/apps/CommandCenter-binary (-b zuk/command-center-main)

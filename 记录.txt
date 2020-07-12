@@ -346,3 +346,14 @@ https://hellojava.iteye.com/blog/2342004
 
 单独下载如下:
 git clone ssh://gerrit.mot.com:29418/home/repo/dev/platform/android/motorola/cbs/vzw/packages/apps/CommandCenter-binary (-b zuk/command-center-main)
+
+
+
+
+
+
+
+
+-----------mac配置ssh连接别名-------
+vi ~/.ssh/config
+--------------编辑以上文件就可以------------
